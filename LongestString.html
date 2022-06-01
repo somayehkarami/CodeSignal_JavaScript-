@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="demo"></h1>
+    <script>
+      function solution(inputArray) {
+        var maxLength = Math.max(...inputArray.map((s) => s.length));
+        return inputArray.filter((s) => s.length === maxLength);
+      }
+
+      var result = solution(["aba", "aa", "ad", "vcd", "aba"]);
+      document.getElementById("demo").innerHTML = result;
+    </script>
+  </body>
+</html>
