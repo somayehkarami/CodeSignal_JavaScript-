@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function firstDuplicate(a) {
+        let len = a.length;
+        let duplicate = -1;
+        let dupeIndex = len;
+
+        for (let i = 0; i < len; i++) {
+          const num = a[i];
+          for (let j = i + 1; j < len; j++) {
+            const otherNum = a[j];
+            if (num === otherNum && j < dupeIndex) {
+              duplicate = num;
+              dupeIndex = j;
+            }
+          }
+        }
+        return duplicate;
+      }
+
+      var result = firstDuplicate([2, 1, 3, 5, 3, 2]);
+
+      console.log(result);
+    </script>
+  </body>
+</html>
