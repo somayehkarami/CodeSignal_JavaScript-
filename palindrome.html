@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="demo"></h1>
+    <script>
+      function solution(inputString) {
+        var len = inputString.length;
+        for (var i = 0; i < len / 2; i++) {
+          if (inputString[i] !== inputString[len - 1 - i]) {
+            return false;
+          }
+        }
+        return true;
+      }
+      var result = solution("aabaa");
+
+      document.getElementById("demo").innerHTML = result;
+    </script>
+  </body>
+</html>
